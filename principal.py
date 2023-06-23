@@ -1,7 +1,7 @@
 from BD.conexionsql import DAO
 import funciones
 
-
+#Menu principal#
 def menuPrincipal():
     continuar = True
     while(continuar):
