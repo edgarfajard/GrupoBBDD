@@ -8,10 +8,10 @@ def menuPrincipal():
         opcionCorrecta = False
         while(not opcionCorrecta):
             print("==================== MENÚ PRINCIPAL ====================")
-            print("1.- Listar cursos")
-            print("2.- Registrar curso")
-            print("3.- Actualizar curso")
-            print("4.- Eliminar curso")
+            print("1.- Listar Leyes")
+            print("2.- Registrar Leyes")
+            print("3.- Actualizar Ley")
+            print("4.- Eliminar Ley")
             print("5.- Salir")
             print("========================================================")
             opcion = int(input("Seleccione una opción: "))
@@ -30,6 +30,8 @@ def menuPrincipal():
 def ejecutarOpcion(opcion):
     dao = DAO()
 
+        #LISTA DE LEYES#
+
     if opcion == 1:
         try:
             cursos = dao.listarCursos()
@@ -40,12 +42,18 @@ def ejecutarOpcion(opcion):
         except:
             print("Ocurrió un error...")
     elif opcion == 2:
+
+         #INSERT LEYES#
+
         curso = funciones.pedirDatosRegistro()
         try:
             dao.registrarCurso(curso)
         except:
             print("Ocurrió un error...")
     elif opcion == 3:
+
+         #ACTUALIZACION DE LEY#
+
         try:
             cursos = dao.listarCursos()
             if len(cursos) > 0:
@@ -59,6 +67,9 @@ def ejecutarOpcion(opcion):
         except:
             print("Ocurrió un error...")
     elif opcion == 4:
+
+         #ELIMINAR LEY#
+ 
         try:
             cursos = dao.listarCursos()
             if len(cursos) > 0:
